@@ -69,4 +69,34 @@ int main() {
         printf("no\n");
     }
 }
+5. Apples and oranges
+#include <stdio.h>
+int main() {
+    int t,n,m,i,temp,temp1;
+    scanf("%d",&t);
+    for(i=0;i<t;i++){
+        scanf("%d%d",&n,&m);
+        if(n<m)
+        {  while (m!=0){
+            temp =m;
+            m=n%m;
+            n=temp;
+           }
+        }
+        else 
+        {    temp1=n;
+             n=m;
+             m=temp1;
+            while (m!=0){
+            temp =m;
+            m=n%m;
+            n=temp;
+           }
+        }
+printf("%d\n",n);
+}
+}
+6.
+
+
 
