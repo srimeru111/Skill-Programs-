@@ -1,0 +1,72 @@
+1. TCS Examination
+#include <stdio.h>
+int main() {
+int t,dd,dt,dm,sd,st,sm,i,dsum=0,ssum=0;
+scanf("%d",&t);
+for(i=0;i<t;i++)
+{ scanf("%d%d%d",&dd,&dt,&dm);
+  scanf("%d%d%d",&sd,&st,&sm);
+  dsum=dd+dt+dm;
+  ssum=sd+st+sm;
+  if(dsum>ssum)
+  printf("DRAGON\n");
+  else if(dsum<ssum)
+  printf("SLOTH\n");
+  else
+  {   if((dd==sd)&&(dt==st)&&(dm==sm))
+      printf("TIE\n");
+      else if((dd>sd)||((dd==sd)&&(dt>st)))
+      printf("DRAGON\n");
+      else
+      printf("SLOTH\n");
+  }
+}
+}
+2. Better Deal
+#include <stdio.h>
+int main() {
+int i,t,a,b,adiscount,bdiscount;
+scanf("%d",&t);
+for(i=0;i<t;i++)
+{
+   scanf("%d%d",&a,&b);
+   adiscount=100-(a);
+   bdiscount=200-((b)*2);
+   if(adiscount>bdiscount)
+    printf("SECOND\n");
+    else if(bdiscount>adiscount)
+    printf("FIRST\n");
+    else
+    printf("BOTH\n");
+}
+}
+3.Hackerman
+#include <stdio.h>
+int main() {
+	int t,a,b,sum=0,i;
+	scanf("%d",&t);
+	for(i=0;i<t;i++)
+	{ scanf("%d%d",&a,&b);
+	 sum=a+b;
+	    if((sum==2)||(sum==3)||(sum==5)||(sum==7)||(sum==11))
+	    printf("Alice\n");
+	    else
+	    printf("Bob\n");
+	}
+}
+4. Existence
+#include <stdio.h>
+int main() {
+    int t,x,y,i,a,b;
+    scanf("%d",&t);
+    for(i=0;i<t;i++){
+        scanf("%d%d",&x,&y);
+        a=(x*x*x*x)+(4*y*y);
+        b=(4*x*x*y);
+        if(a==b)
+        printf("yes\n");
+        else
+        printf("no\n");
+    }
+}
+
