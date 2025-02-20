@@ -1,0 +1,21 @@
+1.Return the Change
+#include <stdio.h>
+int main() {
+    int t,x,cost=0,rem;
+    scanf("%d",&t);
+    for(int i=0;i<t;i++){
+        scanf("%d",&x);
+        if(x%10==0){
+            cost=100-x;
+        }
+        else{ rem=x%10;
+            int ans=(x/10)*10;
+            if(rem<5)
+            cost=100-ans;
+            else
+            cost=100-(ans+10);
+        }
+        printf("%d\n",cost);
+    }
+    return 0;
+}
