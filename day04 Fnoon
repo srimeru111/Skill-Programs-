@@ -19,3 +19,17 @@ int main() {
     }
     return 0;
 }
+2.Odd Sum Pair
+#include <stdio.h>
+
+int main() {
+    int t,a,b,c,i;
+    scanf("%d",&t);
+    for(i=0;i<t;i++){
+        scanf("%d%d%d",&a,&b,&c);
+        if((((a+b)%2)!=0)||(((b+c)%2)!=0)||(((a+c)%2)!=0))
+        printf("yes\n");
+        else
+        printf("no\n");
+    }
+}
