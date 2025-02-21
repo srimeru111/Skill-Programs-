@@ -48,3 +48,40 @@ while(t--){
 }
 return 0;
 }
+2.Difference Pairs
+#include <stdio.h>
+#include <stdlib.h>
+
+void output(int n, int a[], int b) {
+    int flag = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (abs(a[i] - a[j]) == b) {
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 1) {
+            break;
+        }
+    }
+    if (flag == 1) {
+        printf("1\n");
+    } else {
+        printf("0\n");
+    }
+}
+
+int main() {
+    int t, n, b;
+    scanf("%d", &t);
+    while (t--) {
+        scanf("%d %d", &n, &b);
+        int a[n];
+        for (int i = 0; i < n; i++) {
+            scanf("%d", &a[i]);
+        }
+        output(n, a, b);
+    }
+    return 0;
+}
