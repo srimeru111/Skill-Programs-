@@ -1,0 +1,50 @@
+1. Remove Duplicates
+  #include <stdio.h>
+#include<stdlib.h>
+
+int removeduplicates(int *nums, int *size){
+    if(size==0)
+    return size;
+   
+    int idx=0;
+    for(int i=1;i<size;i++){
+        if(nums[i]!=nums[idx]){
+            idx++;
+            nums[idx]=nums[i];
+           
+        }
+    }
+    return idx+1;
+}
+
+int compare(const void* a, const void* b){
+    return(*(int*)a-*(int*)b);
+
+}
+
+int main() {
+int t;
+scanf("%d",&t);
+while(t--){
+   int n;
+   scanf("%d",&n);
+   int*A=(int*)malloc(n*sizeof(int));
+   
+   for(int i=0;i<n;i++){
+       scanf("%d",&A[i]);
+   }
+   
+   qsort(A,n,sizeof(int),compare);
+   
+   int newsize=removeduplicates(A,n);
+   printf("%d\n",newsize);
+   
+   for(int i=0;i<newsize;i++){
+       printf("%d ",A[i]);
+       }
+       printf("\n");
+       
+       free(A);
+}
+return 0;
+}
