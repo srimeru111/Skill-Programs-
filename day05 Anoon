@@ -115,5 +115,4 @@ void QueuePop(Queue* stk){
     }else{
        stk->_front++;
     }
-
 }
